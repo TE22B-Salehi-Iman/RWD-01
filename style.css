@@ -4,12 +4,45 @@ body
     flex-direction: column;
 }
 
+header
+{
+    display: flex;
+    justify-content: center;
+}
+
 /* för surfplattpr */
 @media only screen and (min-width: 641px) and (max-width: 1007px)
 {
     body{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+    
+    header
+    {
+        grid-area: 1/1/2/3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav
+    {
+        grid-area: 2/1/3/2;
+    }
+
+    main
+    {
+        grid-area: 2/2/3/3;
+    }
+
+    footer
+    {
+        grid-area: 3/1/4/3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -19,5 +52,33 @@ body
     body{
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+
+    header
+    {
+        grid-area: 1/1/2/4;
+        display: flex;
+        align-items: center;
+    }
+
+    nav
+    {
+        grid-area: 2/1/3/2;
+    }
+
+    main
+    {
+        grid-area: 2/2/3/4;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer
+    {
+        grid-area: 3/1/4/4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
